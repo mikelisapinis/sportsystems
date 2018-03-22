@@ -62,7 +62,7 @@ td { vertical-align: top; }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 body { line-height: 1; }
-ol, ul { list-style: none; }
+ol, ul { padding-left: 2.5em; }
 table { border-collapse: collapse; border-spacing: 0; }
 
 
@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #wrapper h1 {
-	padding: 1em;
+	padding: 1em 1em 0 1em;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 4em;
@@ -170,6 +170,11 @@ header h3 {
 	font-size: .9em;
 	border-bottom: 1px solid #CCC;
 	text-shadow: 0 1px 1px #333;
+}
+
+ul li,
+ol li {
+	margin-bottom: 1em;
 }
 
 div#main-content {
@@ -283,6 +288,15 @@ footer span.icon {
 	padding: 2em;
 }
 
+.entry {
+	padding: 2em;
+}
+
+.entry p {
+	font-size: 1.1em;
+	line-height: 1.7em;
+}
+
 #header-contacts h3 {
 	margin-bottom: 5px;
 	color: #495F73;
@@ -387,6 +401,10 @@ div#main-content input.button:hover {
 
 #wpstats, .hide {
 	display: none;
+}
+
+#menu-main-menu li {
+	margin: 0;
 }
 
 #menu-case-studies .nav-link {
@@ -817,12 +835,6 @@ aside#address-sidebar h2 {
 	text-decoration: none;
 }
 
-div.entry.location-page {
-	float: left;
-	clear: both;
-	width: 65%;
-}
-
 
 /* INSTRUCTIONS PAGE */
 div.instruction-list p {
@@ -842,19 +854,6 @@ div.instruction-list p {
 div#main-content ul.products li.product a p.category-description {
 	padding-left: 1em;
 	height: 220px;
-}
-
-div#main-content div.entry p {
-	line-height: 1.5em;
-	color: #333;
-}
-
-div#main-content ul.products {
-	margin: 30px 0 0 0;
-}
-
-del span.amount {
-	color: red;
 }
 
 #main-content h1.product_title {
