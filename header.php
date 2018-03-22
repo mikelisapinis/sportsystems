@@ -41,7 +41,7 @@
 
 		<div class="col-12">
 
-			<nav class="navbar navbar-light bg-light navbar-expand-lg">
+			<nav class="navbar navbar-light bg-light navbar-expand-lg navbar-fixed-top">
 				<a class="navbar-brand" href="<?php bloginfo('siteurl');?>">
 					<img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/img/logo.svg" alt="trenazieri.lv - Profesionālie un mājas trenažieri, konsultācijas un serviss">
 				</a>
