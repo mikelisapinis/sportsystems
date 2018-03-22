@@ -6,54 +6,92 @@
  * @subpackage Twenty_Ten
  * @since Twenty Ten 1.0
  */
+$category_name = single_cat_title( '', false );
 
 get_header(); ?>
 
 		<div id="container">
+
 			<div id="content" role="main">
 
-				<h1 class="page-title"><?php echo single_cat_title( '', false ); ?></h1>
-					<?php			
+				<h1 class="page-title"><?php echo $category_name; ?></h1>
 
-					$the_query = new WP_Query(
-					[
+					<?php
 
-						'category_name' => 'sport-club',
-						'posts_per_page' => 100,
-						'order' => 'DESC'
+						if( strtolower($category_name) == "case studies" ){
 
-					]); 
-
-	if ( $the_query->have_posts() ) {
-
-		echo '<div class="project-list">';
-		echo '<div class="row">';
-
-		while ( $the_query->have_posts() ) {
-
-			echo '<div class="col-md-4 project">';
-			$the_query->the_post();
-			$title = get_the_title();
-			$permalink = get_the_permalink();
-			$content = get_the_content();
-
-			if ( has_post_thumbnail() ) {
-				echo get_the_post_thumbnail($post_id);
-			} else {
-				echo "<img src='http://via.placeholder.com/350x350'>";
-			} ?>
+							wp_nav_menu([
+									
+								'menu' => 'case-studies',
+								'container' => '222',
+								'menu_class' => 'row'
 			
-			<h2><?php echo $title; ?></h2>
-			<a class="btn btn-primary" href="<?php echo $permalink; ?>">More</a>
-			<?php echo '</div>';
+							]);
 
-		}
-		echo '</div>';
-		echo '</div>';
-	}
-	wp_reset_postdata();?>
+						} else {
 
-			</div><!-- #content -->
-		</div><!-- #container -->
+							$args = [
+
+								'category_name' => $category_name,
+								'posts_per_page' => 100,
+								'order' => 'DESC',
+								'post_parent' => true
+	
+							];
+
+							$the_query = new WP_Query($args);
+
+							if ( $the_query->have_posts() ) {
+
+								echo '<div class="project-list">';
+								echo '<div class="row">';
+		
+								while ( $the_query->have_posts() ) {
+		
+									echo '<div class="col-md-4 project">';
+		
+										// SELECT CURRENT POST
+										$the_query->the_post();
+		
+										// GET THE TITLE
+										$title = get_the_title();
+		
+										// GET THE PERMALINK
+										$permalink = get_the_permalink();
+		
+										// GET THE EXCERPT
+										$content = get_the_excerpt();
+		
+										// GET THE POST THUMBNAIL
+										if ( has_post_thumbnail() ) {
+		
+											// the_post_thumbnail('full');
+											echo "<img src='http://via.placeholder.com/350x350'>";
+		
+										} else {
+		
+											echo "<img src='http://via.placeholder.com/350x350'>";
+		
+										}; ?>
+					
+										<h2><?php echo $title; ?></h2>
+										<a class="btn btn-primary" href="<?php echo $permalink; ?>">More</a>
+		
+									<?php echo '</div>';
+		
+								}
+		
+								echo '</div>';
+								echo '</div>';
+		
+							}
+		
+							wp_reset_postdata();
+
+						}; ?>
+
+
+			</div>
+		</div>
 
 <?php get_footer(); ?>
