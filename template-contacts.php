@@ -33,7 +33,7 @@
 
 					echo "<li class='list-group-item'>";
 						echo "<i class='fas fa-phone'></i>";
-						echo get_field('phone');
+						echo "<a href='tel:" . get_field('phone') . "'>" . get_field('phone') . "</a>";
 					echo "</li>";
 
 				}
@@ -42,7 +42,7 @@
 
 					echo "<li class='list-group-item'>";
 						echo "<i class='far fa-envelope'></i>";
-						echo get_field('email');
+						echo "<a href='mailto:" . get_field('email') . "'>" . get_field('email') . "</a>";
 					echo "</li>";
 
 				}

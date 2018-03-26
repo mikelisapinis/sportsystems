@@ -10,88 +10,81 @@ $category_name = single_cat_title( '', false );
 
 get_header(); ?>
 
-		<div id="container">
+			<h1 class="page-title"><?php echo $category_name; ?></h1>
 
-			<div id="content" role="main">
+				<?php
 
-				<h1 class="page-title"><?php echo $category_name; ?></h1>
+					if( strtolower($category_name) == "case studies" ){
 
-					<?php
+						wp_nav_menu([
+								
+							'menu' => 'case-studies',
+							'container' => '222',
+							'menu_class' => 'row'
+		
+						]);
 
-						if( strtolower($category_name) == "case studies" ){
+					} else {
 
-							wp_nav_menu([
-									
-								'menu' => 'case-studies',
-								'container' => '222',
-								'menu_class' => 'row'
-			
-							]);
+						$args = [
 
-						} else {
+							'category_name' => $category_name,
+							'posts_per_page' => 100,
+							'order' => 'DESC',
+							'post_parent' => true
 
-							$args = [
+						];
 
-								'category_name' => $category_name,
-								'posts_per_page' => 100,
-								'order' => 'DESC',
-								'post_parent' => true
+						$the_query = new WP_Query($args);
+
+						if ( $the_query->have_posts() ) {
+
+							echo '<div class="project-list">';
+							echo '<div class="row">';
 	
-							];
+							while ( $the_query->have_posts() ) {
+	
+								echo '<div class="col-md-4 project">';
+	
+									// SELECT CURRENT POST
+									$the_query->the_post();
+	
+									// GET THE TITLE
+									$title = get_the_title();
+	
+									// GET THE PERMALINK
+									$permalink = get_the_permalink();
+	
+									// GET THE EXCERPT
+									$content = get_the_excerpt();
 
-							$the_query = new WP_Query($args);
-
-							if ( $the_query->have_posts() ) {
-
-								echo '<div class="project-list">';
-								echo '<div class="row">';
-		
-								while ( $the_query->have_posts() ) {
-		
-									echo '<div class="col-md-4 project">';
-		
-										// SELECT CURRENT POST
-										$the_query->the_post();
-		
-										// GET THE TITLE
-										$title = get_the_title();
-		
-										// GET THE PERMALINK
-										$permalink = get_the_permalink();
-		
-										// GET THE EXCERPT
-										$content = get_the_excerpt();
-		
-										// GET THE POST THUMBNAIL
-										if ( has_post_thumbnail() ) {
-		
-											// the_post_thumbnail('full');
-											echo "<img src='http://via.placeholder.com/350x350'>";
-		
-										} else {
-		
-											echo "<img src='http://via.placeholder.com/350x350'>";
-		
-										}; ?>
-					
-										<h2><?php echo $title; ?></h2>
-										<a class="btn btn-primary" href="<?php echo $permalink; ?>">More</a>
-		
-									<?php echo '</div>';
-		
-								}
-		
-								echo '</div>';
-								echo '</div>';
-		
+									// GET THE POST THUMBNAIL
+									if ( has_post_thumbnail() ) {
+	
+										the_post_thumbnail('full', ['class'=>'mx-auto d-block']);
+										// echo "<img src='http://via.placeholder.com/350x350'>";
+	
+									} else {
+	
+										echo "<img src='http://via.placeholder.com/350x350'>";
+	
+									}; ?>
+				
+									<h2><?php echo $title; ?></h2>
+	
+								<?php echo '</div>';
+	
 							}
-		
-							wp_reset_postdata();
 
-						}; ?>
+	
+						}
+	
+						wp_reset_postdata();
+
+					}; ?>
 
 
-			</div>
 		</div>
+	</div>
 
 <?php get_footer(); ?>

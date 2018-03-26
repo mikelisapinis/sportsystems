@@ -197,27 +197,6 @@ p {
 	font-weight: 300;
 }
 
-.heateor_sss_sharing_title {
-	margin-top: 1em;
-}
-
-h1.page-title {
-	border-bottom: none;
-	margin-bottom: 0;
-	margin-right: 1em;
-	padding-bottom: 0;
-	text-transform: capitalize;
-}
-
-h1.page-title a {
-	color: #404041;
-}
-
-h1.page-title a:hover {
-	color: #FF7110;
-	text-decoration: none;
-}
-
 a.btn.category-link {
 	margin-top: 0.5em;
 }
@@ -431,13 +410,26 @@ div#main-content input.button:hover {
 	text-align: center;
 }
 
-.project img {
+/* .project img {
 	width: 100%;
+} */
+
+.project {
+	padding: 2em;
+}
+
+.project a {
+	color: #404041;
+	text-decoration: none;
+}
+
+.project a:hover {
+	text-decoration: none;
 }
 
 iframe {
 	max-width: 100%;
-	max-height: 350px;
+	max-height: 300px;
 	overflow: hidden;
 }
 
