@@ -1,39 +1,108 @@
-<?php /*Template Name: Kontakti */ ?>
+<?php /*Template Name: Contacts */ ?>
 <?php get_header(); ?>
 
-<div class="row">
-<?php get_sidebar(); ?>
+<div class="row contacts">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<div class="post" id="post-<?php the_ID(); ?>">
-			<div class="row">
-			<div class="col-6">
-				<h2 class="simple-heading"><?php the_title(); ?></h2>
-				<div id="contact-form">
-					<?php the_content(); ?>
-				</div>
+	<div class="col-12 contacts-bg">
+		<h1><?php the_title(); ?></h1>
+		<?php the_content(); ?>
+	</div>
+	<div class="col-12">
+		<div class="row">
+			<div class="col-lg-4">
+
+				<h2>Drop us a line!</h2>
+				<?php
+				// CONTACT FORM
+				if( get_field('contact-form') ){
+
+					$cf7 = get_field('contact-form');
+					echo do_shortcode($cf7);
+
+				}
+				?>
+
 			</div>
-			<div id="address-sidebar" class="col-6">
-				<h2>Adrese</h2>
-				Rīga, Bieķensalas iela 21, LV-1004
-				<h2>Darba laiks</h2>
-				10:00 - 18:00, katru dienu,<br/> izņemot sestdienas, svētdienas
-				<h2>Telefons</h2>
-				+371 67845794, +371 29219953
-				<h2>E-pasts</h2>
-				arturs@sportsystems.lv
-				<h2>Fakss</h2>
-				+371 67845794
-				<h2>Firmas nosaukums</h2>
-				SIA Sporta Sistēmas<br/>
-				PVN Nr. LV40003569749<br/>
-				Jurid. adrese Ikšķile, Papeļu iela 4a<br/>
-				Veikala adrese: Bieķensalas 21, Rīga, LV 1004<br/>
-				SEB banka AS<br/>
-				Kods UNLALV2X<br/>
-				Konts LV44UNLA0050000645788<br/>
+			<div class="col-lg-4">
+
+				<h2>Contact</h2>
+				<ul class="list-group">
+				<?php
+
+				if( get_field('phone') ){
+
+					echo "<li class='list-group-item'>";
+						echo "<i class='fas fa-phone'></i>";
+						echo get_field('phone');
+					echo "</li>";
+
+				}
+
+				if( get_field('email') ){
+
+					echo "<li class='list-group-item'>";
+						echo "<i class='far fa-envelope'></i>";
+						echo get_field('email');
+					echo "</li>";
+
+				}
+
+				if( get_field('fax') ){
+
+					echo "<li class='list-group-item'>";
+						echo "<i class='fas fa-fax'></i>";
+						echo get_field('fax');
+					echo "</li>";
+
+				}
+
+				if( get_field('properties') ){
+
+					echo "<li class='list-group-item'>";
+						echo "<i class='fas fa-briefcase'></i> Business information";
+						echo get_field('properties');
+					echo "</li>";
+
+				}
+
+				?>
+				</ul>
+
 			</div>
-</div>
+			<div class="col-lg-4">
+				
+				<h2>Visit our store!</h2>
+				<?php
+
+					if( get_field('address') ){
+
+						echo "<li class='list-group-item'>";
+							echo "<i class='fas fa-map-marker'></i>";
+							echo get_field('address');
+						echo "</li>";
+
+					}
+
+					if( get_field('working-hours') ){
+
+						echo "<li class='list-group-item'>";
+							echo "<i class='far fa-clock'></i>";
+							echo get_field('working-hours');
+						echo "</li>";
+	
+					}
+
+					if( get_field('map') ){
+
+						echo get_field('map');
+
+					}
+
+				?>
+
+			</div>
 		</div>
-		<?php endwhile; endif; ?>
+	</div>
+<?php endwhile; endif; ?>
 </div>
 <?php get_footer(); ?>

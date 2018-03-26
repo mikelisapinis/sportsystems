@@ -4,6 +4,8 @@
 // Load jQuery
 if ( !is_admin() ) {
 	wp_enqueue_script('jquery');
+	wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/releases/v5.0.8/js/all.js' );
+	wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
 	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js' );
 }
 

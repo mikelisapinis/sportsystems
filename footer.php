@@ -37,7 +37,7 @@
 	</section>
 
 	<section id="author" class="clearfix col-12">
-		<p><?php echo date('Y'); ?> &copy; SIA Sporta Sistēmas | Dizains un izstrāde - <a target="_blank" href="http://www.emei.eu">www.emei.eu</a></p>
+		<p><?php echo date('Y'); ?> &copy; SIA Sporta Sistēmas</p>
 	</section>
 
 </footer>

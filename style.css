@@ -135,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #wrapper h1 {
-	padding: 0.5em;
+	padding: 1em 0.5em 1em 0.5em;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 4em;
@@ -264,28 +264,38 @@ footer span.icon {
 	font-size: 1em;
 }
 
-.icon.email {
-	background-image: url(img/email.svg);
-    background-size: 30px 22px;
+#wrapper .list-group-item {
+	border: none;
+	font-weight: 300;
 }
 
-.icon.phone {
-	background-image: url(img/phone.svg);
-    background-size: 30px 23px;
+#wrapper input,
+#wrapper textarea {
+	border: none;
+	background: #f2f2f2;
+	border-radius: 0;
+	box-shadow: none;
+	padding: 0.5em 1em;
 }
 
-.icon.hours {
-	background-image: url(img/hours.svg);
-    background-size: 30px 21px;
+.contacts .btn {
+	width: 100%;
 }
 
-.icon.location {
-	background-image: url(img/location.svg);
-	background-size: 32px 21px;
+#wrapper .btn-primary {
+	background-color: #FF7110;
+    border-color: #FF7110;
 }
 
-#wrapper.container-fluid {
-	padding: 0;
+.contacts svg {
+	font-size: 1.2em;
+	margin-right: 0.5em;
+}
+
+.contacts-bg {
+	background: transparent url("img/contacts-bg.jpg") no-repeat center center;
+	background-size: cover;
+	margin-bottom: 2.5em;
 }
 
 #container {
@@ -425,13 +435,15 @@ div#main-content input.button:hover {
 	width: 100%;
 }
 
+iframe {
+	max-width: 100%;
+	max-height: 350px;
+	overflow: hidden;
+}
+
 /* MAIN NAVIGATION */
 #sidebar {
 	padding-top: 1em;
-}
-
-#sidebar iframe {
-	margin-left: 20px;
 }
 
 #sidebar a.draugiem {
@@ -612,30 +624,10 @@ nav#breadcrumbs a {
 }
 
 /* FOOTER STYLES */
-section#partner-list {
-	border-top: 1px solid #CCC;
-}
-
-section#partner-list ul {
-	margin: 0;
-	width: 100%;
-}
-
-section#partner-list ul li {
-	display: block;
-	margin: 0;
-	float: left;
-}
-
-section#partner-list img {
-	padding: 1em;
-	display: block;
-}
-
 footer {
+	margin-top: 5em;
 	background: #F2F2F2;
 	padding: 1em;
-	font-size: .9em;
 }
 
 #wrapper footer ul a,
@@ -814,29 +806,6 @@ span.wpcf7-not-valid-tip-no-ajax {
 
 span.wpcf7-list-item {
 	margin: 0 .5em 0 0;
-}
-
-
-/* CONTACTS */
-iframe {
-	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
-	border-radius: 7px;
-	border: 1px solid #CCC;
-	width: 100% !important;
-}
-
-aside#address-sidebar h2 {
-	margin: 15px 0 0 0;
-	border-bottom: 1px solid #CCC;
-}
-
-#sidebar .widget-area h2 a {
-	color: #404041;
-}
-
-#sidebar .widget-area h2 a:hover {
-	text-decoration: none;
 }
 
 
