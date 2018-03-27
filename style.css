@@ -400,19 +400,34 @@ div#main-content input.button:hover {
 	margin: 0;
 }
 
+/* CASE STUDIES */
 #menu-case-studies .nav-link {
-	border: 1px solid #F2F2F2;
+	display: table-cell;
+	vertical-align: middle;
 	padding: 1em;
+	height: 350px;
 	text-align: center;
+	background-size: cover;
+	font-size: 2em;
+	color: #FFF;
+	font-weight: 300;
+	line-height: 1.1em;
+	background-color: #F2F2F2;
+}
+
+#menu-case-studies li {
+	display: table;
+	list-style: none;
+	margin-bottom: 2em;
+}
+
+#menu-case-studies .sport-club .nav-link {
+	background: url("img/sport-club.jpg") no-repeat center center;
 }
 
 .project h2 {
 	text-align: center;
 }
-
-/* .project img {
-	width: 100%;
-} */
 
 .project {
 	padding: 2em;

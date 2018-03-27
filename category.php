@@ -20,7 +20,11 @@ get_header(); ?>
 								
 							'menu' => 'case-studies',
 							'container' => '222',
-							'menu_class' => 'row'
+							'menu_class' => 'row',
+							'before' => '<div>',
+							'after' => '</div>',
+							'link_before' => 'linkb',
+							'link_after' => 'linka'
 		
 						]);
 
