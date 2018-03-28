@@ -401,7 +401,14 @@ div#main-content input.button:hover {
 }
 
 /* CASE STUDIES */
-#menu-case-studies .nav-link {
+#menu-case-studies,
+#project-list {
+	margin: 0;
+	padding: 0;
+}
+
+#menu-case-studies .nav-link,
+#project-list .nav-link {
 	display: table-cell;
 	vertical-align: middle;
 	padding: 1em;
@@ -413,16 +420,64 @@ div#main-content input.button:hover {
 	font-weight: 300;
 	line-height: 1.1em;
 	background-color: #F2F2F2;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
-#menu-case-studies li {
+#project-list .nav-link {
+	padding: 0;
+}
+
+#project-list .nav-link img,
+#project-list .nav-item img {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+#project-list .nav-item .title-link {
+	display: table;
+	width: 100%;
+	bottom: 0;
+	height: auto;
+	padding: 0.5em;
+	background: #000000;
+}
+
+#menu-case-studies li,
+#project-list li {
 	display: table;
 	list-style: none;
 	margin-bottom: 2em;
 }
 
+#project-list li {
+	display: block;
+}
+
 #menu-case-studies .sport-club .nav-link {
-	background: url("img/sport-club.jpg") no-repeat center center;
+	background-image: linear-gradient(rgba(61, 61, 61, 0.45), rgba(36, 36, 35, 0.45)), url("img/sport-club.jpg");
+}
+
+#menu-case-studies .sport-club .nav-link:hover {
+	background-image: linear-gradient(rgba(61, 61, 61, 0.85), rgba(36, 36, 35, 0.85)), url("img/sport-club.jpg");
+}
+
+#menu-case-studies .independent-gym .nav-link {
+	background-image: linear-gradient(rgba(61, 61, 61, 0.45), rgba(36, 36, 35, 0.45)), url("img/independent-gym.jpg");
+}
+
+
+#menu-case-studies .independent-gym .nav-link:hover {
+	background-image: linear-gradient(rgba(61, 61, 61, 0.85), rgba(36, 36, 35, 0.85)), url("img/independent-gym.jpg");
+}
+
+#menu-case-studies .hotel-gym .nav-link {
+	background-image: linear-gradient(rgba(61, 61, 61, 0.45), rgba(36, 36, 35, 0.45)), url("img/hotel-gym.jpg");
+}
+
+#menu-case-studies .hotel-gym .nav-link:hover {
+	background-image: linear-gradient(rgba(61, 61, 61, 0.85), rgba(36, 36, 35, 0.85)), url("img/hotel-gym.jpg");
 }
 
 .project h2 {
