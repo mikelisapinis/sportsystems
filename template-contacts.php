@@ -1,12 +1,18 @@
 <?php /*Template Name: Contacts */ ?>
 <?php get_header(); ?>
 
-<div class="row contacts">
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<div class="row bg-image">
+
 	<div class="col-12 contacts-bg">
 		<h1><?php the_title(); ?></h1>
-		<?php the_content(); ?>
 	</div>
+
+</div>
+
+<div class="row contacts">
+
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
 	<div class="col-12">
 		<div class="row">
 			<div class="col-lg-4">

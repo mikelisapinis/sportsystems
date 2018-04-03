@@ -10,86 +10,93 @@ $category_name = single_cat_title( '', false );
 
 get_header(); ?>
 
-     <div class="row" id="manufacturers">
+<div class="row bg-image">
 
-          <div class="col-12 contacts-bg">
+     <div class="col-12 contacts-bg">
 
-               <h1 class="page-title"><?php echo $category_name; ?></h1>
+          <h1 class="page-title"><?php echo $category_name; ?></h1>
 
-          </div>
+     </div>
 
-          <?php
+</div>
 
-          if( strtolower($category_name) == "case studies" ){
+<div class="row" id="manufacturers">
 
-               wp_nav_menu([
-                         
-                    'menu' => 'case-studies',
-                    'container' => '222',
-                    'menu_class' => 'row'
+     <?php
 
-               ]);
+     if( strtolower($category_name) == "case studies" ){
 
-          } else {
+          wp_nav_menu([
+                    
+               'menu' => 'case-studies',
+               'menu_class' => 'row'
 
-               $args = [
+          ]);
 
-                    'category_name' => $category_name,
-                    'posts_per_page' => 100,
-                    'order' => 'DESC',
-                    'post_parent' => true
+     } else {
 
-               ];
+          $args = [
 
-               $the_query = new WP_Query($args);
+               'category_name' => $category_name,
+               'posts_per_page' => 100,
+               'order' => 'DESC',
+               'post_parent' => true
 
-               if ( $the_query->have_posts() ) {
+          ];
 
-                    echo '<div class="row">';
+          $the_query = new WP_Query($args);
 
-                    while ( $the_query->have_posts() ) {
+          if ( $the_query->have_posts() ) {
 
-                         echo '<div class="col-md-4 project">';
+               echo '<div class="row">';
 
-                              // SELECT CURRENT POST
-                              $the_query->the_post();
+               while ( $the_query->have_posts() ) {
 
-                              // GET THE TITLE
-                              $title = get_the_title();
+                    echo '<div class="col-md-4 project">';
 
-                              // GET THE PERMALINK
-                              $permalink = get_the_permalink();
+                         // SELECT CURRENT POST
+                         $the_query->the_post();
 
-                              // GET THE EXCERPT
-                              $content = get_the_excerpt();
+                         // GET THE TITLE
+                         $title = get_the_title();
 
-                              echo "<a href='" . $permalink . "'>";
+                         // GET THE PERMALINK
+                         $permalink = get_the_permalink();
+
+                         // GET THE EXCERPT
+                         $content = get_the_content();
+
+                         echo "<a href='" . $permalink . "'>";
 
                               // GET THE POST THUMBNAIL
                               if ( has_post_thumbnail() ) {
 
-                                   the_post_thumbnail('full', ['class'=>'mx-auto d-block']);
-                                   // echo "<img src='http://via.placeholder.com/350x350'>";
+                                   the_post_thumbnail('full', ['class'=>'mx-auto d-block manufacturer']);
 
                               } else {
 
                                    echo "<img src='http://via.placeholder.com/350x350'>";
 
-                              }; ?>
+                              };
 
-                         <?php echo '</a></div>';
+                         echo "</a>";
 
-                    }
+                         echo "<p>" . $content . "</p>";
+
+                         echo "<a href='" . $permalink . "' class='btn btn-light d-block mx-auto'>More</a>";
 
                     echo "</div>";
 
                }
 
-               wp_reset_postdata();
+               echo "</div>";
 
-          }; ?>
+          }
 
+          wp_reset_postdata();
 
-     </div>
+     }; ?>
+
+</div>
 
 <?php get_footer(); ?>
