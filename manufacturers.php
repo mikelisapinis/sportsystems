@@ -8,16 +8,18 @@
 			<h1><?php the_title(); ?></h1>
 			<div class="entry">
 				<?php the_content(); ?>
-				
 
-				<?php global $post; // required
-                    $args = array('category_name' => 'Manufacturers'); // include category 9
-                    $custom_posts = get_posts($args);
-                    foreach($custom_posts as $post) : setup_postdata($post);
+				<?php global $post;
+                    $args = array('category_name' => 'Manufacturers');
+				$manufacturers = get_posts($args);
+
+				foreach($manufacturers as $post) : setup_postdata($post);
+
                          the_title();
-                         the_excerpt();
-                    endforeach;
-               ?>
+					the_excerpt();
+
+				endforeach; ?>
+
 			</div>
 		</div>
 		<?php endwhile; endif; ?>

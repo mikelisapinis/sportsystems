@@ -290,50 +290,6 @@ footer span.icon {
 	line-height: 1.7em;
 }
 
-#header-contacts h3 {
-	margin-bottom: 5px;
-	color: #495F73;
-	text-shadow: none;
-	text-transform: uppercase;
-	font-size: 1.3em;
-}
-
-#header-contacts address {
-	line-height: 1em;
-}
-
-#header-utilities ul {
-	margin: 0 0 1px 2em;
-}
-
-#header-utilities .row {
-	padding-right: 1em;
-}
-
-#header-utilities ul li {
-	display: block;
-	float: left;
-	margin-right: 2em;
-	padding-bottom: .68em;
-}
-
-#header-utilities ul li a {
-	color: #666;
-	font-size: 1.1em;
-	font-weight: 300;
-	text-transform: uppercase;
-	padding: 0.5em;
-	border-bottom: 4px solid transparent;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-
-#header-utilities ul li a:hover {
-	color: #000;
-	border-bottom-color: #435E74;
-}
-
 div.column-text {
 	text-align: justify;
 	-webkit-column-count: 2;
@@ -422,6 +378,10 @@ div#main-content input.button:hover {
 	background-color: #F2F2F2;
 	background-repeat: no-repeat;
 	background-position: center center;
+	background-image: inherit;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
 }
 
 #project-list .nav-link {
@@ -457,27 +417,44 @@ div#main-content input.button:hover {
 
 #menu-case-studies .sport-club .nav-link {
 	background-image: linear-gradient(rgba(61, 61, 61, 0.45), rgba(36, 36, 35, 0.45)), url("img/sport-club.jpg");
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
 }
 
 #menu-case-studies .sport-club .nav-link:hover {
 	background-image: linear-gradient(rgba(61, 61, 61, 0.85), rgba(36, 36, 35, 0.85)), url("img/sport-club.jpg");
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
 }
 
 #menu-case-studies .independent-gym .nav-link {
 	background-image: linear-gradient(rgba(61, 61, 61, 0.45), rgba(36, 36, 35, 0.45)), url("img/independent-gym.jpg");
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
 }
-
 
 #menu-case-studies .independent-gym .nav-link:hover {
 	background-image: linear-gradient(rgba(61, 61, 61, 0.85), rgba(36, 36, 35, 0.85)), url("img/independent-gym.jpg");
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
 }
 
 #menu-case-studies .hotel-gym .nav-link {
 	background-image: linear-gradient(rgba(61, 61, 61, 0.45), rgba(36, 36, 35, 0.45)), url("img/hotel-gym.jpg");
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
 }
 
 #menu-case-studies .hotel-gym .nav-link:hover {
 	background-image: linear-gradient(rgba(61, 61, 61, 0.85), rgba(36, 36, 35, 0.85)), url("img/hotel-gym.jpg");
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
 }
 
 .project h2 {

@@ -76,8 +76,6 @@ get_header(); ?>
                                    echo "<img src='http://via.placeholder.com/350x350'>";
 
                               }; ?>
-     
-                              <h2><?php echo $title; ?></h2>
 
                          <?php echo '</a></div>';
 
