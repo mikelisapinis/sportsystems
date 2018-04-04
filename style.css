@@ -423,45 +423,62 @@ div#main-content input.button:hover {
 
 #menu-case-studies .sport-club .nav-link {
 	background-image: linear-gradient(rgba(61, 61, 61, 0.45), rgba(36, 36, 35, 0.45)), url("img/sport-club.jpg");
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
-	transition: all 1s;
 }
 
 #menu-case-studies .sport-club .nav-link:hover {
 	background-image: linear-gradient(rgba(61, 61, 61, 0.85), rgba(36, 36, 35, 0.85)), url("img/sport-club.jpg");
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
-	transition: all 1s;
 }
 
 #menu-case-studies .independent-gym .nav-link {
 	background-image: linear-gradient(rgba(61, 61, 61, 0.45), rgba(36, 36, 35, 0.45)), url("img/independent-gym.jpg");
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
-	transition: all 1s;
 }
 
 #menu-case-studies .independent-gym .nav-link:hover {
 	background-image: linear-gradient(rgba(61, 61, 61, 0.85), rgba(36, 36, 35, 0.85)), url("img/independent-gym.jpg");
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
-	transition: all 1s;
 }
 
 #menu-case-studies .hotel-gym .nav-link {
 	background-image: linear-gradient(rgba(61, 61, 61, 0.45), rgba(36, 36, 35, 0.45)), url("img/hotel-gym.jpg");
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
-	transition: all 1s;
 }
 
 #menu-case-studies .hotel-gym .nav-link:hover {
 	background-image: linear-gradient(rgba(61, 61, 61, 0.85), rgba(36, 36, 35, 0.85)), url("img/hotel-gym.jpg");
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
-	transition: all 1s;
 }
+
+#menu-case-studies .universities .nav-link {
+	background-image: linear-gradient(rgba(61, 61, 61, 0.45), rgba(36, 36, 35, 0.45)), url("img/universities.jpg");
+}
+
+#menu-case-studies .universities .nav-link:hover {
+	background-image: linear-gradient(rgba(61, 61, 61, 0.85), rgba(36, 36, 35, 0.85)), url("img/universities.jpg");
+}
+
+#menu-case-studies .corporate-company .nav-link {
+	background-image: linear-gradient(rgba(61, 61, 61, 0.45), rgba(36, 36, 35, 0.45)), url("img/corporate-company.jpg");
+}
+
+#menu-case-studies .corporate-company .nav-link:hover {
+	background-image: linear-gradient(rgba(61, 61, 61, 0.85), rgba(36, 36, 35, 0.85)), url("img/corporate-company.jpg");
+}
+
+#menu-case-studies .rehabilitation .nav-link {
+	background-image: linear-gradient(rgba(61, 61, 61, 0.45), rgba(36, 36, 35, 0.45)), url("img/rehabilitation.jpg");
+}
+
+#menu-case-studies .rehabilitation .nav-link:hover {
+	background-image: linear-gradient(rgba(61, 61, 61, 0.85), rgba(36, 36, 35, 0.85)), url("img/rehabilitation.jpg");
+}
+
+#menu-case-studies .crossfit-gym .nav-link {
+	background-image: linear-gradient(rgba(61, 61, 61, 0.45), rgba(36, 36, 35, 0.45)), url("img/crossfit-gym.jpg");
+}
+
+#menu-case-studies .crossfit-gym .nav-link:hover {
+	background-image: linear-gradient(rgba(61, 61, 61, 0.85), rgba(36, 36, 35, 0.85)), url("img/crossfit-gym.jpg");
+}
+
+
+
 
 .project h2 {
 	text-align: center;

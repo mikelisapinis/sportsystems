@@ -26,12 +26,17 @@ get_header(); ?>
 
 	} else {
 
+		$category_name = strtolower($category_name);
+		$category_name = str_replace(' ', '-', $category_name);
+		$category_name = str_replace(',', '-', $category_name);
+		$category_name = str_replace("'", "", $category_name);
+		$category_name = str_replace('&amp;', '-and-', $category_name);
+
 		$args = [
 
 			'category_name' => $category_name,
 			'posts_per_page' => 100,
-			'order' => 'DESC',
-			'post_parent' => true
+			'order' => 'DESC'
 
 		];
 
@@ -40,7 +45,6 @@ get_header(); ?>
 		if ( $the_query->have_posts() ) {
 
 			echo '<ul id="project-list" class="row">';
-			// echo '<div class="row">';
 
 			while ( $the_query->have_posts() ) {
 
@@ -81,15 +85,10 @@ get_header(); ?>
 
 			}
 
-
 		}
 
 		wp_reset_postdata();
 
 	}; ?>
-
-
-		<!-- </div>
-	</div> -->
 
 <?php get_footer(); ?>

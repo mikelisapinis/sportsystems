@@ -66,8 +66,6 @@ get_header(); ?>
                          // GET THE EXCERPT
                          $content = get_the_content();
 
-                         echo "<a href='" . $permalink . "'>";
-
                               // GET THE POST THUMBNAIL
                               if ( has_post_thumbnail() ) {
 
@@ -79,11 +77,7 @@ get_header(); ?>
 
                               };
 
-                         echo "</a>";
-
                          echo "<p>" . $content . "</p>";
-
-                         echo "<a href='" . $permalink . "' class='btn btn-light d-block mx-auto'>More</a>";
 
                     echo "</div>";
 
